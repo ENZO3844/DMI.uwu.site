@@ -1,69 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&display=swap" rel="stylesheet">
-	<title>DMI | qwq</title>
-	<link rel="icon" type="image/png" href="https://visage.surgeplay.com/face/512/DMI_di.png" />
-	<style>
-		body{
-			margin: 0px;
-			font-family: 'Montserrat', sans-serif;
-			text-align: center;
-		}
-		.main{
-			background:#2A4480;
-			height: 100vh;
-			display: flex;
-			justify-content: safe center;
-			align-items: safe center;
-		}
-		.card{
-			background:#26292A;
-			background: linear-gradient(to right, rgba(247,32,136,1) 0%, rgba(247,32,136,1) 33%, rgba(247,209,0,1) 33%, rgba(247,209,0,1) 67%, rgba(32,171,247,1) 67%, rgba(32,171,247,1) 100%) left bottom #26292A no-repeat;
-			background-size: 100% 10px;
-			height: 400px;
-			width: 620px;
-			box-shadow: 0 0 10px rgba(0,0,0,0.5);
-			padding: 10px;
-			border-radius: 10px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-		.comming_soon{
-			filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
-		}
-		h2{
-			margin: 0px;
-			font-size: xxx-large;
-			color:#4671D5;
-			padding-bottom: 32px;
-		}
-		a {
-			text-decoration: underline;
-			cursor: pointer;
-			color: white;
-		}
-	</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap" 
+    rel="stylesheet"
+  />
+
+  <meta name="description" content="Официальная страница Enzo Mayhem | DMI: Telegram-группа, YouTube, Twitch и галерея.">
+  <meta name="theme-color" content="#2A4480" />
+  
+  <title>Enzo Mayhem — DMI</title>
+  <link rel="icon" type="image/png" href="https://visage.surgeplay.com/face/512/DMI_di.png" />
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #2A4480;
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .card {
+      position: relative;
+      width: 90%;
+      max-width: 600px;
+      padding: 50px 30px;
+      border-radius: 24px;
+      background: #1e2324;
+      text-align: center;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      bottom: -5px; 
+      left: 0;
+      right: 0;
+      height: 8px;
+      background: linear-gradient(
+      90deg, 
+      transparent 0%, 
+      #f7d100 20%,
+      #f72088 80%,
+      transparent 100%
+    );
+    -index: 3; 
+    }
+
+
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      z-index: 2;
+    }
+
+    .avatar:hover {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 8px 24px rgba(255, 221, 0, 0.6);
+      border: 3px solid #f7d100;
+    }
+
+    h2 {
+      color: white;
+      font-size: 2rem;
+      margin: 0 0 24px;
+      z-index: 2;
+      position: relative;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      z-index: 2;
+    }
+
+    .socials img {
+      width: 48px;
+      height: 48px;
+      transition: transform 0.25s ease, filter 0.25s ease;
+      border-radius: 10px;
+    }
+
+    .socials a:hover img,
+    .socials a:focus img {
+      transform: translateY(-6px);
+      filter: drop-shadow(0 4px 10px rgba(255,255,255,0.3));
+    }
+
+    .cta-btn {
+      background: #2070f0;
+      color: #26292A;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 2;
+      position: relative;
+    }
+
+    .cta-btn:hover {
+      background: #f72088;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .card { padding: 30px 20px; }
+      .avatar { width: 80px; height: 80px; }
+      .socials img { width: 42px; height: 42px; }
+      h2 { font-size: 1.6rem; }
+      .card::after { height: 90px; }
+    }
+    .avatar-link {
+      display: inline-block;
+    }
+  </style>
 </head>
 <body>
-	<div class="main">
-		<div class="card">
-			<div class="comming_soon">
-				<a href="ref/reference.png"><img src="img/DMI.png" alt="" width="128" height="128"></a>
-				<h2>Enzo Mayhem</h2> 
-				<a title="group" target="_blank" href="https://t.me/Domik_Dmi"><img src="img/tg.png" alt="" width="32" height="32"></a>
-				<a title="album" target="_blank" href="https://ibb.co/album/7xyDpc"><img src="img/gallery.png" alt="" width="64" height="64"></a>
-				<a target="_blank" href="https://boosty.to/dmi_club"><img src="img/boosty.png" alt="" width="64" height="64"></a>
-				<a target="_blank" href="https://www.youtube.com/@Enzo_Mayhem"><img src="img/youtube.png" alt="" width="64" height="64"></a>
-				<a target="_blank" href="https://www.twitch.tv/enzo_mayhem"><img src="img/twitch.png" alt="" width="64" height="64"></a>
-				<a target="_blank" href="https://github.com/ENZO3844"><img src="img/github.png" alt="" width="32" height="32"></a>
-			</div>
-		</div>
-	</div>
+
+  <div class="card">
+    <a href="ref/reference.png" target="_blank" title="Открыть референс" class="avatar-link">
+      <img 
+        src="img/DMI.png" 
+        alt="Мой аватар — Enzo Mayhem" 
+        class="avatar"
+      >
+    </a>
+
+    <h2>Enzo Mayhem</h2>
+    
+    <div class="socials">
+      <a href="https://t.me/Domik_Dmi" title="Telegram group" target="_blank">
+        <img src="img/tg.png" alt="Telegram" width="48" height="48">
+      </a>
+      <a href="https://ibb.co/album/7xyDpc" title="Album" target="_blank">
+        <img src="img/gallery.png" alt="Gallery" width="48" height="48">
+      </a>
+      <a href="https://boosty.to/dmi_club" title="Boosty" target="_blank">
+        <img src="img/boosty.png" alt="Boosty" width="48" height="48">
+      </a>
+      <a href="https://www.youtube.com/@Enzo_Mayhem" title="YouTube" target="_blank">
+        <img src="img/youtube.png" alt="YouTube" width="48" height="48">
+      </a>
+      <a href="https://www.twitch.tv/enzo_mayhem" title="Twitch" target="_blank">
+        <img src="img/twitch.png" alt="Twitch" width="48" height="48">
+      </a>
+      <a href="https://github.com/ENZO3844" title="GitHub" target="_blank">
+        <img src="img/github.png" alt="GitHub" width="36" height="36">
+      </a>
+    </div>
+
+    <button class="cta-btn" onclick="alert('Скоро будет много интересного! 🚀')">
+      Следить за обновлениями
+    </button>
+  </div>
+
 </body>
 </html>
