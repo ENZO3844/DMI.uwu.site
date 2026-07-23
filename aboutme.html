@@ -27,49 +27,49 @@
             overflow-x: hidden;
         }
 
-            body::before {
-      content: '';
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80vw; 
-      height: 80vh;
+        body::before {
+            content: '';
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80vw; 
+            height: 80vh;
 
-      border-radius: 50% 60% 70% 40% / 50% 40% 30% 60%;
-  
-      background: conic-gradient(
-        from 0deg, 
-        #FFD700 0%,
-        #FF8C00 25%, 
-        #FF006E 50%, 
-        #00BFFF 75%, 
-        #FFD700 
-      );
-  
-      opacity: 0.15;
-      filter: blur(40px);
-  
-      z-index: -2;
+            border-radius: 50% 60% 70% 40% / 50% 40% 30% 60%;
+     
+            background: conic-gradient(
+                from 0deg, 
+                #FFD700 0%,
+                #FF8C00 25%, 
+                #FF006E 50%, 
+                #00BFFF 75%, 
+                #FFD700 
+            );
+     
+            opacity: 0.15;
+            filter: blur(40px);
+     
+            z-index: -2;
 
-      will-change: transform;
-      animation-name: orbit;
-      animation-duration: 8s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-      backface-visibility: hidden;
-    }
+            will-change: transform;
+            animation-name: orbit;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            backface-visibility: hidden;
+        }
 
-    @keyframes orbit {
-      from { transform: translate(-50%, -50%) rotate(0deg); }
-      to   { transform: translate(-50%, -50%) rotate(360deg); }
-    }
+        @keyframes orbit {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to   { transform: translate(-50%, -50%) rotate(360deg); }
+        }
 
         .card {
             position: relative;
             width: 95%;
             max-width: 600px;
-            height: 90vh;
+            height: 80vh;
             padding: 30px;
             border-radius: 24px;
             background: #1e2324;
@@ -129,10 +129,11 @@
         }
         .contacts {
             color:#1d7ae4;
-            bottom: 0;
             margin-top: auto;
             text-align: center;
+            flex-shrink: 0;
         }
+
     </style>
 </head>
 <body>
@@ -149,19 +150,17 @@
                 <img src="your-image.jpg" alt="Описание изображения">
             </div>-->
             
-            
-
             <div class="contacts">
                 <!--<p>Дополнительная информация о моих проектах и достижениях.</p>-->
                 <h2 style="color: #fff; margin-top: 0;">Контактная информация</h2>
                 <i>📧</i>
                 <a href="mailto:enzoarticwolf@mail.ru"> <span>enzoarticwolf@mail.ru</span> </a>
             </div>
-
-
-
-
+            
         </div>
     </div>
+        <div style="position: absolute; bottom: 0; width: 100%; text-align: center; color: rgba(255,255,255,0.3); padding: 20px;">
+        ©2024 Enzo mayhem. Все права защищены
+        </div>
 </body>
 </html>
