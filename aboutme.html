@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enzo Mayhem — DMI</title>
+    <link rel="icon" type="image/png" href="https://visage.surgeplay.com/face/512/DMI_di.png" />
+    <style>
+        @font-face {
+            font-family: 'Komika Title';
+            src: url('font/Komika Title.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: 
+                radial-gradient(circle at top left, #4A65B9 0%, transparent 30%),
+                linear-gradient(180deg, #3355a6 0%, #1F386D 100%);
+            background-color: #2A4480;
+            background-repeat: no-repeat;
+            font-family: 'Komika Title', sans-serif;
+            overflow-x: hidden;
+        }
+
+            body::before {
+      content: '';
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80vw; 
+      height: 80vh;
+
+      border-radius: 50% 60% 70% 40% / 50% 40% 30% 60%;
+  
+      background: conic-gradient(
+        from 0deg, 
+        #FFD700 0%,
+        #FF8C00 25%, 
+        #FF006E 50%, 
+        #00BFFF 75%, 
+        #FFD700 
+      );
+  
+      opacity: 0.15;
+      filter: blur(40px);
+  
+      z-index: -2;
+
+      will-change: transform;
+      animation-name: orbit;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      backface-visibility: hidden;
+    }
+
+    @keyframes orbit {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to   { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+        .card {
+            position: relative;
+            width: 95%;
+            max-width: 600px;
+            height: 90vh;
+            padding: 30px;
+            border-radius: 24px;
+            background: #1e2324;
+            text-align: center;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-content {
+            overflow-y: auto;
+            flex: 1;
+            padding: 10px 0;
+        }
+        .card::after {
+            content: "";
+            position: absolute;
+            bottom: -5px; 
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(
+                90deg, 
+                transparent 0%, 
+                #f7d100 20%,
+                #f72088 80%,
+                transparent 100%
+            );
+            z-index: 3; 
+        }
+        .card h1 {
+            color: #fff;
+            margin-top: 0;
+            font-weight: 700;
+            font-size: 2.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .card p {
+            color: #e0e0e0;
+            line-height: 1.6;
+            font-size: 1.1rem;
+            margin: 20px 0;
+        }
+        .card .highlight {
+            color: #1d7ae4;
+            font-weight: 600;
+        }
+        .image-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            border: 3px solid #1d3a5f;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .contacts {
+            color:#1d7ae4;
+            margin-top: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-content">
+            <h1>О моём профиле</h1>
+            <p>Привет! Меня зовут <span class="highlight">Enzo Mayhem</span>, и я специалист в области <span class="highlight">разработки ПО</span>.</p>
+            <p>У меня есть опыт работы с различными технологиями, включая <span class="highlight">JavaScript</span>, <span class="highlight">Python</span> и <span class="highlight">React</span>.</p>
+            <p>Я люблю создавать <span class="highlight">красивые и функциональные</span> веб-приложения, которые делают пользовательский опыт лучше.</p>
+            <p>Мои интересы включают <span class="highlight">программирование</span>, <span class="highlight">дизайн</span> и <span class="highlight">инновации</span>.</p>
+            
+            <div class="image-container">
+                <img src="your-image.jpg" alt="Описание изображения">
+            </div>
+            
+            
+
+            <div class="contacts">
+                <p>Дополнительная информация о моих проектах и достижениях.</p>
+                <h2 style="color: #fff; margin-top: 0;">Контактная информация</h2>
+                <i>📧</i>
+                <span>enzo.mayhem@example.com</span>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</body>
+</html>
